@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./assets/sass/App.scss";
+import Home from "./components/Home";
+import IntroductionKit from "./components/IntroductionKit";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <BrowserRouter>
+            <div className="container mt-2" style={{ marginTop: 40 }}>
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="introduction" element={<IntroductionKit />} />
+                </Routes>
+            </div>
+        </BrowserRouter>
+    );
 }
 
 export default App;
