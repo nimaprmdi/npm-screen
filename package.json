@@ -7,6 +7,8 @@
         "@testing-library/jest-dom": "^5.16.4",
         "@testing-library/react": "^13.2.0",
         "@testing-library/user-event": "^13.5.0",
+        "flickity": "^3.0.0",
+        "flickity-transformer": "^0.3.6",
         "node-sass": "^7.0.1",
         "plyr-react": "^4.0.0-alpha.1",
         "react": "^18.1.0",

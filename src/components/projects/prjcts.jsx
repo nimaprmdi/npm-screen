@@ -5,6 +5,11 @@ let PRJCTS = [
         tags: ["WebGl", "React", "Three.js"],
         featuredImageUrl: "/assets/images/projects/project-(1).jpg",
         projectUrl: "#",
+        galleryImagesUrl: [
+            "/assets/images/projects/cavatina/cavatina.jpg",
+            "/assets/images/projects/cavatina/cavatina-2.jpg",
+            "/assets/images/projects/cavatina/cavatina-3.jpg",
+        ],
     },
     {
         id: "2",
@@ -12,6 +17,11 @@ let PRJCTS = [
         tags: ["Three.js", "3D"],
         featuredImageUrl: "/assets/images/projects/project-(1).jpg",
         projectUrl: "#",
+        galleryImagesUrl: [
+            "/assets/images/projects/cavatina/cavatina.jpg",
+            "/assets/images/projects/cavatina/cavatina-2.jpg",
+            "/assets/images/projects/cavatina/cavatina-3.jpg",
+        ],
     },
     {
         id: "3",
@@ -19,6 +29,11 @@ let PRJCTS = [
         tags: ["3D"],
         featuredImageUrl: "/assets/images/projects/project-(1).jpg",
         projectUrl: "#",
+        galleryImagesUrl: [
+            "/assets/images/projects/cavatina/cavatina.jpg",
+            "/assets/images/projects/cavatina/cavatina-2.jpg",
+            "/assets/images/projects/cavatina/cavatina-3.jpg",
+        ],
     },
     {
         id: "4",
@@ -26,6 +41,11 @@ let PRJCTS = [
         tags: ["React", "Three js"],
         featuredImageUrl: "/assets/images/projects/project-(1).jpg",
         projectUrl: "#",
+        galleryImagesUrl: [
+            "/assets/images/projects/cavatina/cavatina.jpg",
+            "/assets/images/projects/cavatina/cavatina-2.jpg",
+            "/assets/images/projects/cavatina/cavatina-3.jpg",
+        ],
     },
 ];
 

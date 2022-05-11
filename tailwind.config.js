@@ -6,14 +6,18 @@ module.exports = {
                 primary: "#333b75",
                 accent: "#73e6ff",
                 primary_black: "#07090a",
+                primary_heavy_dark: "#00010D",
                 primary_dark: "#111419",
+                primary_light: "#292B2F",
                 primary_white: "#ffffff",
             },
             spacing: {
                 67.75: "16.938rem", // 271px
                 68.5: "17.125rem", // 274px
+                115: "28.75rem", // 460px
                 128: "32rem",
                 190: "47.5rem", // 760px
+                230: "57.5rem", // 920px
             },
             maxWidth: {
                 190: "47.5rem", // 760px

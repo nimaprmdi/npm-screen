@@ -1,38 +1,11 @@
-/*------------------------------------*\
-  #Flickity Custom Styles
-\*------------------------------------*/
-.flickity-viewport,
-.flickity-slider {
-    width: 100%;
-    height: 100%;
-    transition: none;
-}
+.c-projects__carousel {
+    .flickity-button {
+        background-color: $npm_main_primary_color;
+        color: $npm_main_white_color;
+        transition: 0.3s all;
 
-/* Page Dots defaults */
-.flickity-page-dots {
-    list-style-type: none;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    li {
-        cursor: pointer;
-        width: rem(15px);
-        height: rem(15px);
-        // background-color: $npm_tertiary_text_color;
-        border-radius: 999px;
-        display: inline-block;
-        margin: rem(0px 6.25px);
-    }
-
-    .dot.is-selected {
-        // background-color: $npm_primary_accent_color;
-    }
-}
-
-.flickity-page-dots li {
-    &:hover {
-        // background-color: $npm_primary_accent_color;
+        &:hover {
+            background-color: $npm_main_dark_color;
+        }
     }
 }
