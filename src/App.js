@@ -5,14 +5,10 @@ import Projects from "./components/Projects";
 import Layout from "./components/filter/Layout";
 import SneakGrid from "./components/filter/SneakGrid";
 import SneakerView from "./components/filter/SneakerView";
-
 import BrandLink from "./components/filter/BrandLink";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-
-import ProjectLink from "./components/projects/ProjectLink";
-import ProjectsTagLink from "./components/projects/ProjectsTagLink";
 import ProjectsGrid from "./components/projects/ProjectsGrid";
 import ProjectsView from "./components/projects/ProjectsView";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
     return (
@@ -29,9 +25,7 @@ function App() {
                         <Route path="sneakers/:id" element={<SneakerView />} />
                     </Route>
 
-                    <Route path="projects" element={<ProjectLink />} />
-
-                    <Route path="/projects" element={<ProjectsTagLink />}>
+                    <Route path="/projects">
                         <Route index element={<ProjectsGrid />} />
                         <Route path="projects/:id" element={<ProjectsView />} />
                     </Route>

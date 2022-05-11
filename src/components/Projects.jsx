@@ -35,36 +35,34 @@ const Projects = () => {
     return (
         <div className="c-archives w-full h-screen overflow-auto flex justify-between bg-primary_dark">
             <div className="c-archives__aside h-scree pt-16 pl-8">
-                <div className="c-archives__title">
-                    <h2 className="u-white-color m-0">Projects</h2>
+                <h2 className="u-white-color m-0">Projects</h2>
 
-                    <p className="h5 mt-6 u-light-gray-color">Categories</p>
-                    <ul className="list-disc pl-5 pt-4">
-                        <li className="w-max mb-2 list-disc items-center u-light-gray-color">
-                            <a href="#" className="h5 u-light-gray-color">
-                                WebGl
-                            </a>
-                        </li>
+                <p className="h5 mt-6 u-light-gray-color">Categories</p>
+                <ul className="list-disc pl-5 pt-4">
+                    <li className="w-max mb-2 list-disc items-center u-light-gray-color">
+                        <a href="#" className="h5 u-light-gray-color">
+                            WebGl
+                        </a>
+                    </li>
 
-                        <li className="w-max mb-2 list-disc  items-center u-light-gray-color">
-                            <a href="#" className="h5 u-light-gray-color">
-                                Three.js
-                            </a>
-                        </li>
+                    <li className="w-max mb-2 list-disc  items-center u-light-gray-color">
+                        <a href="#" className="h5 u-light-gray-color">
+                            Three.js
+                        </a>
+                    </li>
 
-                        <li className="w-max mb-2 list-disc  items-center u-light-gray-color">
-                            <a href="#" className="h5 u-light-gray-color">
-                                React
-                            </a>
-                        </li>
+                    <li className="w-max mb-2 list-disc  items-center u-light-gray-color">
+                        <a href="#" className="h5 u-light-gray-color">
+                            React
+                        </a>
+                    </li>
 
-                        <li className="w-max mb-2 list-disc  items-center u-light-gray-color">
-                            <a href="#" className="h5 u-light-gray-color">
-                                3D
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                    <li className="w-max mb-2 list-disc  items-center u-light-gray-color">
+                        <a href="#" className="h5 u-light-gray-color">
+                            3D
+                        </a>
+                    </li>
+                </ul>
             </div>
 
             <div className="c-archives-cards h-screen overflow-auto pt-16 pr-16 ">

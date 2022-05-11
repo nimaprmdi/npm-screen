@@ -25,7 +25,7 @@ const ProjectsView = () => {
             <br />
 
             <img
-                src={prjct.imageUrl}
+                src={prjct.featuredImageUrl}
                 style={{
                     borderRadius: "8px",
                     maxWidth: "100%",

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useSearchParams } from "react-router-dom";
-import ProjectsTagLink from "./ProjectsTagLink";
+
 const ProjectLink = ({ tag, children, ...props }) => {
     let [searchPrams] = useSearchParams();
     let isActive = searchPrams.get("projects") === tag;
@@ -10,7 +10,8 @@ const ProjectLink = ({ tag, children, ...props }) => {
             <Link
                 {...props}
                 to={`/projects/?projects=${tag}`}
-                style={{ ...props.style, color: isActive ? "red" : "blue" }}
+                style={{ ...props.style }}
+                className={`h5  ${isActive ? "u-white-color" : "u-light-gray-color"}`}
             >
                 {children}
             </Link>

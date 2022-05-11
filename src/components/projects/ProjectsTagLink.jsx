@@ -1,31 +1,45 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation, matchPath, useSearchParams } from "react-router-dom";
+
 import { tags } from "./prjcts";
 import ProjectLink from "./ProjectLink";
 
 const ProjectsTagLink = () => {
+    const { pathname } = useLocation();
+    const isAdminPath = matchPath("/projects", pathname);
+    let [searchPrams] = useSearchParams();
+
     return (
-        <div>
-            <nav>
-                <ul>
-                    <li>
-                        <Link to={"/projects"}>All</Link>
-                    </li>
+        <>
+            <ul className="list-disc pl-5 pt-4">
+                <li
+                    className={`w-max mb-2 list-disc items-center ${
+                        isAdminPath.pathname === "/projects/"
+                            ? " u-light-gray-color"
+                            : " u-white-color"
+                    }`}
+                >
+                    <Link to={"/projects"}>All</Link>
+                </li>
 
-                    {tags.map((tag, index) => {
-                        return (
-                            <li key={index}>
-                                <ProjectLink tag={tag}>{tag}</ProjectLink>
-                            </li>
-                        );
-                    })}
-                </ul>
-            </nav>
+                {tags.map((tag, index) => {
+                    let isActive = searchPrams.get("projects") === tag;
 
-            <hr />
+                    return (
+                        <li
+                            className={`w-max mb-2 list-disc items-center ${
+                                isActive ? " u-white-color" : " u-light-gray-color"
+                            }`}
+                            key={index}
+                        >
+                            <ProjectLink tag={tag}>{tag}</ProjectLink>
+                        </li>
+                    );
+                })}
+            </ul>
 
             <Outlet />
-        </div>
+        </>
     );
 };
 
