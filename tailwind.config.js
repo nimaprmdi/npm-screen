@@ -12,6 +12,7 @@ module.exports = {
                 primary_white: "#ffffff",
             },
             spacing: {
+                25: "6.25rem", // 100px
                 67.75: "16.938rem", // 271px
                 68.5: "17.125rem", // 274px
                 115: "28.75rem", // 460px

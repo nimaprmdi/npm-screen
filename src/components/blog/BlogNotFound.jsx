@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-const NoMatch = () => {
+
+const BlogNotFound = () => {
     return (
         <div>
             <h2>Nothing to see here!</h2>
@@ -11,4 +12,4 @@ const NoMatch = () => {
     );
 };
 
-export default NoMatch;
+export default BlogNotFound;

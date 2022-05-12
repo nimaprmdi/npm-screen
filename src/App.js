@@ -1,14 +1,12 @@
 import "./assets/sass/App.scss";
 import Home from "./components/Home";
 import IntroductionKit from "./components/IntroductionKit";
-import Projects from "./components/Projects";
-import Layout from "./components/filter/Layout";
-import SneakGrid from "./components/filter/SneakGrid";
-import SneakerView from "./components/filter/SneakerView";
-import BrandLink from "./components/filter/BrandLink";
 import ProjectsGrid from "./components/projects/ProjectsGrid";
 import ProjectsView from "./components/projects/ProjectsView";
+import BlogGrid from "./components/blog/BlogGrid";
+import BlogView from "./components/blog/BlogView";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./components/About";
 
 function App() {
     return (
@@ -17,12 +15,11 @@ function App() {
                 <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="introduction" element={<IntroductionKit />} />
-                    {/* <Route path="projects" element={<Projects />} /> */}
-                    <Route path="filter" element={<BrandLink />} />
+                    <Route path="about" element={<About />} />
 
-                    <Route path="/filter" element={<Layout />}>
-                        <Route index element={<SneakGrid />} />
-                        <Route path="sneakers/:id" element={<SneakerView />} />
+                    <Route path="/blog">
+                        <Route index element={<BlogGrid />} />
+                        <Route path="post/:id" element={<BlogView />} />
                     </Route>
 
                     <Route path="/projects">
