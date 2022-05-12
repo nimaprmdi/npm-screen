@@ -18,7 +18,7 @@ const BlogGrid = () => {
             <div className="c-archives__aside h-scree pt-16 pl-8">
                 <h2 className="u-white-color m-0">Blogs</h2>
                 <p className="h5 mt-6 u-light-gray-color">Categories</p>
-
+                {/* BlogTag link is here */}
                 <BlogTagLink />
             </div>
 
