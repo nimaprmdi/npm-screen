@@ -27,7 +27,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "scss": "node-sass — watch sass -o src/assets/css",
-        "deploy": "gh-pages -d dist"
+        "deploy": "gh-pages -d build"
     },
     "eslintConfig": {
         "extends": [
