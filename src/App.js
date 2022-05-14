@@ -5,6 +5,7 @@ import ProjectsGrid from "./components/projects/ProjectsGrid";
 import ProjectsView from "./components/projects/ProjectsView";
 import BlogGrid from "./components/blog/BlogGrid";
 import BlogView from "./components/blog/BlogView";
+import Performance from "./components/Performance";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/About";
 
@@ -16,6 +17,7 @@ function App() {
                     <Route path="/" element={<Home />} />
                     <Route path="introduction" element={<IntroductionKit />} />
                     <Route path="about" element={<About />} />
+                    <Route path="performance" element={<Performance />} />
 
                     <Route path="/blog">
                         <Route index element={<BlogGrid />} />

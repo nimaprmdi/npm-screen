@@ -12,8 +12,10 @@ const Home = () => {
                 Here you can see my performance with higher resolution
             </h3>
 
-            <div className="w-full mt-4">
-                <Link to="/introduction">Continue</Link>
+            <div className="w-full mt-10">
+                <Link to="/introduction" className="o-btn ">
+                    Continue
+                </Link>
             </div>
         </div>
     );
