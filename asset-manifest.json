@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/npm-screen/static/css/main.c3c49260.css",
-    "main.js": "/npm-screen/static/js/main.f0a69dfb.js",
-    "static/js/787.558ccec3.chunk.js": "/npm-screen/static/js/787.558ccec3.chunk.js",
-    "static/media/nima-pour-mohamadi.jpg": "/npm-screen/static/media/nima-pour-mohamadi.463c6b2308c2bc30c6b7.jpg",
-    "static/media/dots.svg": "/npm-screen/static/media/dots.15beb2643379644f2851.svg",
-    "static/media/small-dots.svg": "/npm-screen/static/media/small-dots.d64db3f21c846ce9ecef.svg",
-    "index.html": "/npm-screen/index.html",
-    "main.c3c49260.css.map": "/npm-screen/static/css/main.c3c49260.css.map",
-    "main.f0a69dfb.js.map": "/npm-screen/static/js/main.f0a69dfb.js.map",
-    "787.558ccec3.chunk.js.map": "/npm-screen/static/js/787.558ccec3.chunk.js.map"
+    "main.css": "/npm-screen/build/static/css/main.bd60d469.css",
+    "main.js": "/npm-screen/build/static/js/main.b3ccbfe3.js",
+    "static/js/787.558ccec3.chunk.js": "/npm-screen/build/static/js/787.558ccec3.chunk.js",
+    "static/media/nima-pour-mohamadi.jpg": "/npm-screen/build/static/media/nima-pour-mohamadi.463c6b2308c2bc30c6b7.jpg",
+    "static/media/dots.svg": "/npm-screen/build/static/media/dots.15beb2643379644f2851.svg",
+    "static/media/small-dots.svg": "/npm-screen/build/static/media/small-dots.d64db3f21c846ce9ecef.svg",
+    "index.html": "/npm-screen/build/index.html",
+    "main.bd60d469.css.map": "/npm-screen/build/static/css/main.bd60d469.css.map",
+    "main.b3ccbfe3.js.map": "/npm-screen/build/static/js/main.b3ccbfe3.js.map",
+    "787.558ccec3.chunk.js.map": "/npm-screen/build/static/js/787.558ccec3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3c49260.css",
-    "static/js/main.f0a69dfb.js"
+    "static/css/main.bd60d469.css",
+    "static/js/main.b3ccbfe3.js"
   ]
 }
