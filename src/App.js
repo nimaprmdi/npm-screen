@@ -14,19 +14,19 @@ function App() {
         <BrowserRouter>
             <div>
                 <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="introduction" element={<IntroductionKit />} />
-                    <Route path="about" element={<About />} />
-                    <Route path="performance" element={<Performance />} />
+                    <Route path="/npm-screen/" element={<Home />} />
+                    <Route path="/npm-screen/introduction" element={<IntroductionKit />} />
+                    <Route path="/npm-screen/about" element={<About />} />
+                    <Route path="/npm-screen/performance" element={<Performance />} />
 
-                    <Route path="/blog">
+                    <Route path="/npm-screen/blog">
                         <Route index element={<BlogGrid />} />
-                        <Route path="post/:id" element={<BlogView />} />
+                        <Route path="/npm-screen/post/:id" element={<BlogView />} />
                     </Route>
 
-                    <Route path="/projects">
+                    <Route path="/npm-screen/projects">
                         <Route index element={<ProjectsGrid />} />
-                        <Route path="projects/:id" element={<ProjectsView />} />
+                        <Route path="/npm-screen/projects/:id" element={<ProjectsView />} />
                     </Route>
                 </Routes>
             </div>
