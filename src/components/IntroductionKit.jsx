@@ -8,12 +8,12 @@ const IntroductionKit = () => {
             <div className="w-3/6 h-auto flex content-center items-center">
                 <div className="ml-4 w-full">
                     <Plyr
-                        poster={"/assets/images/image.jpg"}
+                        poster={process.env.PUBLIC_URL + "/assets/images/image.jpg"}
                         source={{
                             type: "video",
                             sources: [
                                 {
-                                    src: "/assets/videos/video.mp4",
+                                    src: process.env.PUBLIC_URL + "/assets/videos/video.mp4",
                                     type: "video/mp4",
                                     size: 720,
                                 },

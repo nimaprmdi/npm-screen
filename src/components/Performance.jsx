@@ -12,30 +12,13 @@ const Performance = () => {
                     url: "#",
                     title: "Cavatina",
                     description: "A minimal WordPress theme.Good choice for publishing projects.",
-                    gallery: ["/assets/images/projects/cavatina/cavatina-2.jpg"],
+                    gallery: [process.env.PUBLIC_URL + "/assets/images/projects/cavatina/cavatina-2.jpg"],
                 },
                 {
                     url: "#",
                     title: "Cavatina",
                     description: "A minimal WordPress theme.Good choice for publishing projects.",
-                    gallery: ["/assets/images/projects/cavatina/cavatina-2.jpg"],
-                },
-            ],
-        },
-        {
-            icon: "akar-icons:html-fill",
-            projects: [
-                {
-                    url: "#",
-                    title: "Cavatina",
-                    description: "A minimal WordPress theme.Good choice for publishing projects.",
-                    gallery: ["/assets/images/projects/cavatina/cavatina-2.jpg"],
-                },
-                {
-                    url: "#",
-                    title: "Cavatina",
-                    description: "A minimal WordPress theme.Good choice for publishing projects.",
-                    gallery: ["/assets/images/projects/cavatina/cavatina-2.jpg"],
+                    gallery: [process.env.PUBLIC_URL + "/assets/images/projects/cavatina/cavatina-2.jpg"],
                 },
             ],
         },
@@ -46,13 +29,13 @@ const Performance = () => {
                     url: "#",
                     title: "Cavatina",
                     description: "A minimal WordPress theme.Good choice for publishing projects.",
-                    gallery: ["/assets/images/projects/cavatina/cavatina-2.jpg"],
+                    gallery: [process.env.PUBLIC_URL + "/assets/images/projects/cavatina/cavatina-2.jpg"],
                 },
                 {
                     url: "#",
                     title: "Cavatina",
                     description: "A minimal WordPress theme.Good choice for publishing projects.",
-                    gallery: ["/assets/images/projects/cavatina/cavatina-2.jpg"],
+                    gallery: [process.env.PUBLIC_URL + "/assets/images/projects/cavatina/cavatina-2.jpg"],
                 },
             ],
         },
@@ -63,13 +46,30 @@ const Performance = () => {
                     url: "#",
                     title: "Cavatina",
                     description: "A minimal WordPress theme.Good choice for publishing projects.",
-                    gallery: ["/assets/images/projects/cavatina/cavatina-2.jpg"],
+                    gallery: [process.env.PUBLIC_URL + "/assets/images/projects/cavatina/cavatina-2.jpg"],
                 },
                 {
                     url: "#",
                     title: "Cavatina",
                     description: "A minimal WordPress theme.Good choice for publishing projects.",
-                    gallery: ["/assets/images/projects/cavatina/cavatina-2.jpg"],
+                    gallery: [process.env.PUBLIC_URL + "/assets/images/projects/cavatina/cavatina-2.jpg"],
+                },
+            ],
+        },
+        {
+            icon: "akar-icons:html-fill",
+            projects: [
+                {
+                    url: "#",
+                    title: "Cavatina",
+                    description: "A minimal WordPress theme.Good choice for publishing projects.",
+                    gallery: [process.env.PUBLIC_URL + "/assets/images/projects/cavatina/cavatina-2.jpg"],
+                },
+                {
+                    url: "#",
+                    title: "Cavatina",
+                    description: "A minimal WordPress theme.Good choice for publishing projects.",
+                    gallery: [process.env.PUBLIC_URL + "/assets/images/projects/cavatina/cavatina-2.jpg"],
                 },
             ],
         },
@@ -110,61 +110,6 @@ const Performance = () => {
                 {performanceItems.map((performanceItem, index) => {
                     return <PerformanceItem key={index} index={index} data={performanceItem} />;
                 })}
-                {/* The Card Left */}
-                {/* <div className="c-performance__card flex flex-wrap py-52">
-                    <div className="c-performance__left mb-10 w-full flex">
-                        <div className="c-performance__col c-performance__col--content flex justify-start relative">
-                            <div className="c-performance__item py-8">
-                                <div className="c-performance__carousel">
-                                    <Flickity options={flickityOptions} className="w-full">
-                                        <a href="#">
-                                            <div className="w-190 max-w-full mx-10">
-                                                <img
-                                                    className="w-full h-full rounded-2.5 object-cover"
-                                                    src="/assets/images/projects/cavatina/cavatina-2.jpg"
-                                                />
-
-                                                <div className="c-performance__context mt-9">
-                                                    <h3 className="u-white-color">Cavatina</h3>
-
-                                                    <p className="u-white-color">
-                                                        A minimal WordPress theme.Good choice for
-                                                        publishing projects.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-
-                                        <a href="#">
-                                            <div className="w-190 max-w-full mx-10">
-                                                <img
-                                                    className="w-full h-full rounded-2.5 object-cover"
-                                                    src="/assets/images/projects/cavatina/cavatina-2.jpg"
-                                                />
-
-                                                <div className="c-performance__context mt-9">
-                                                    <h3 className="u-white-color">Cavatina</h3>
-
-                                                    <p className="u-white-color">
-                                                        A minimal WordPress theme.Good choice for
-                                                        publishing projects.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </Flickity>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="c-performance__col c-performance__col--logo w-full flex items-center justify-start">
-                            <Icon
-                                icon="akar-icons:html-fill"
-                                className="w-36 h-36 u-white-color ml-20"
-                            />
-                        </div>
-                    </div>
-                </div> */}
             </div>
         </div>
     );
