@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/npm-screen/static/css/main.c3c49260.css",
-    "main.js": "/npm-screen/static/js/main.62025958.js",
+    "main.js": "/npm-screen/static/js/main.85c3f13c.js",
     "static/js/787.558ccec3.chunk.js": "/npm-screen/static/js/787.558ccec3.chunk.js",
     "static/media/nima-pour-mohamadi.jpg": "/npm-screen/static/media/nima-pour-mohamadi.463c6b2308c2bc30c6b7.jpg",
     "static/media/dots.svg": "/npm-screen/static/media/dots.15beb2643379644f2851.svg",
     "static/media/small-dots.svg": "/npm-screen/static/media/small-dots.d64db3f21c846ce9ecef.svg",
     "index.html": "/npm-screen/index.html",
     "main.c3c49260.css.map": "/npm-screen/static/css/main.c3c49260.css.map",
-    "main.62025958.js.map": "/npm-screen/static/js/main.62025958.js.map",
+    "main.85c3f13c.js.map": "/npm-screen/static/js/main.85c3f13c.js.map",
     "787.558ccec3.chunk.js.map": "/npm-screen/static/js/787.558ccec3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c3c49260.css",
-    "static/js/main.62025958.js"
+    "static/js/main.85c3f13c.js"
   ]
 }

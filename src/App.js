@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import "./assets/sass/App.scss";
 import Home from "./components/Home";
 import IntroductionKit from "./components/IntroductionKit";
@@ -14,19 +15,19 @@ function App() {
         <BrowserRouter>
             <div>
                 <Routes>
-                    <Route path="/npm-screen/" element={<Home />} />
-                    <Route path="/npm-screen/introduction" element={<IntroductionKit />} />
-                    <Route path="/npm-screen/about" element={<About />} />
-                    <Route path="/npm-screen/performance" element={<Performance />} />
+                    <Route exact path="npm-screen/" element={<Home />} />
+                    <Route path="npm-screen/introduction" element={<IntroductionKit />} />
+                    <Route path="npm-screen/about" element={<About />} />
+                    <Route path="npm-screen/performance" element={<Performance />} />
 
-                    <Route path="/npm-screen/blog">
+                    <Route path="npm-screen/blog">
                         <Route index element={<BlogGrid />} />
-                        <Route path="/npm-screen/post/:id" element={<BlogView />} />
+                        <Route path="npm-screen/post/:id" element={<BlogView />} />
                     </Route>
 
-                    <Route path="/npm-screen/projects">
+                    <Route path="npm-screen/projects">
                         <Route index element={<ProjectsGrid />} />
-                        <Route path="/npm-screen/projects/:id" element={<ProjectsView />} />
+                        <Route path="npm-screen/projects/:id" element={<ProjectsView />} />
                     </Route>
                 </Routes>
             </div>
