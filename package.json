@@ -9,6 +9,7 @@
         "@testing-library/user-event": "^13.5.0",
         "flickity": "^2.3.0",
         "flickity-transformer": "^0.3.6",
+        "gh-pages": "^4.0.0",
         "node-sass": "^7.0.1",
         "plyr-react": "^4.0.0-alpha.1",
         "react": "^18.1.0",
@@ -24,7 +25,8 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject",
-        "scss": "node-sass — watch sass -o src/assets/css"
+        "scss": "node-sass — watch sass -o src/assets/css",
+        "deploy": "gh-pages -d dist"
     },
     "eslintConfig": {
         "extends": [
