@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import "./assets/sass/App.scss";
 import Home from "./components/Home";
 import IntroductionKit from "./components/IntroductionKit";
@@ -7,27 +6,27 @@ import ProjectsView from "./components/projects/ProjectsView";
 import BlogGrid from "./components/blog/BlogGrid";
 import BlogView from "./components/blog/BlogView";
 import Performance from "./components/Performance";
-import { BrowserRouter, HashRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import About from "./components/About";
 
 function App() {
     return (
         <HashRouter>
-            <div>
+            <div className="root-app.js">
                 <Routes>
-                    <Route exact path="npm-screen/" element={<Home />} />
-                    <Route path="npm-screen/introduction" element={<IntroductionKit />} />
-                    <Route path="npm-screen/about" element={<About />} />
-                    <Route path="npm-screen/performance" element={<Performance />} />
+                    <Route path="/" element={<Home />} />
+                    <Route path="introduction" element={<IntroductionKit />} />
+                    <Route path="about" element={<About />} />
+                    <Route path="performance" element={<Performance />} />
 
-                    <Route path="npm-screen/blog">
+                    <Route path="blog">
                         <Route index element={<BlogGrid />} />
-                        <Route path="npm-screen/post/:id" element={<BlogView />} />
+                        <Route path="post/:id" element={<BlogView />} />
                     </Route>
 
-                    <Route path="npm-screen/projects">
+                    <Route path="projects">
                         <Route index element={<ProjectsGrid />} />
-                        <Route path="npm-screen/projects/:id" element={<ProjectsView />} />
+                        <Route path="projects/:id" element={<ProjectsView />} />
                     </Route>
                 </Routes>
             </div>
