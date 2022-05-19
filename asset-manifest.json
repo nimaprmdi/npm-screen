@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/npm-screen/static/css/main.15851013.css",
-    "main.js": "/npm-screen/static/js/main.82de6f39.js",
+    "main.css": "/npm-screen/static/css/main.bd5fe334.css",
+    "main.js": "/npm-screen/static/js/main.e8be9baa.js",
     "static/js/787.558ccec3.chunk.js": "/npm-screen/static/js/787.558ccec3.chunk.js",
     "static/media/nima-pour-mohamadi.jpg": "/npm-screen/static/media/nima-pour-mohamadi.463c6b2308c2bc30c6b7.jpg",
     "static/media/spinner.svg": "/npm-screen/static/media/spinner.8410b689d9e1c8fa8fc2ece6e1d2db34.svg",
     "static/media/dots.svg": "/npm-screen/static/media/dots.15beb2643379644f2851.svg",
     "static/media/small-dots.svg": "/npm-screen/static/media/small-dots.d64db3f21c846ce9ecef.svg",
     "index.html": "/npm-screen/index.html",
-    "main.15851013.css.map": "/npm-screen/static/css/main.15851013.css.map",
-    "main.82de6f39.js.map": "/npm-screen/static/js/main.82de6f39.js.map",
+    "main.bd5fe334.css.map": "/npm-screen/static/css/main.bd5fe334.css.map",
+    "main.e8be9baa.js.map": "/npm-screen/static/js/main.e8be9baa.js.map",
     "787.558ccec3.chunk.js.map": "/npm-screen/static/js/787.558ccec3.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.15851013.css",
-    "static/js/main.82de6f39.js"
+    "static/css/main.bd5fe334.css",
+    "static/js/main.e8be9baa.js"
   ]
 }
