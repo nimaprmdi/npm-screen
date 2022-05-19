@@ -16,3 +16,9 @@
         }
     }
 }
+
+.c-card__image {
+    img {
+        max-height: inherit;
+    }
+}

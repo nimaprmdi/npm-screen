@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Icon } from "@iconify/react";
+import LazyLoader from "./LazyLoader";
+import nima from "../assets/images/nima-pour-mohamadi.jpg";
 
-const About = () => {
+const About = ({ setPageLoading }) => {
     const [context, setContext] = useState({
         title: "Hey there! I’m Nima.",
         description:
@@ -17,14 +19,18 @@ const About = () => {
         ],
     });
 
+    useEffect(() => {
+        setTimeout(() => {
+            setPageLoading(false);
+        }, 500);
+    }, []);
+
     return (
         <div className="c-about w-full h-screen bg-gradient-to-b from-primary_heavy_dark to-primary_light flex">
             <div className="c-about__context h-screen flex flex-wrap content-center">
                 <div className="c-about__about">
                     <h1 className="c-about__title u-white-color">{context.title}</h1>
-                    <p className="c-about__desc u-white-color h4 u-gray-color">
-                        {context.description}
-                    </p>
+                    <p className="c-about__desc u-white-color h4 u-gray-color">{context.description}</p>
                 </div>
 
                 <div className="c-about__contact w-full mt-20">
@@ -35,10 +41,7 @@ const About = () => {
                             return (
                                 <a key={index} href={social.url}>
                                     <div className="c-about__social-item w-25 h-25 bg-primary mr-8 flex items-center justify-center rounded-2.5">
-                                        <Icon
-                                            className="w-14 h-14 u-white-color"
-                                            icon={social.logo}
-                                        />
+                                        <Icon className="w-14 h-14 u-white-color" icon={social.logo} />
                                     </div>
                                 </a>
                             );
@@ -52,7 +55,9 @@ const About = () => {
                     <div className="c-about__rectangle-gray"></div>
                     <div className="c-about__rectangle-blue"></div>
                     <div className="c-about__rectangle-aqua"></div>
-                    <div className="c-about__npm-mask"></div>
+                    <div className="c-about__npm-mask">
+                        <LazyLoader src={nima} alt={"Nima Pourmohamadi"} className="w-full h-full object-cover rounded-2.5" />
+                    </div>
                 </div>
             </div>
         </div>

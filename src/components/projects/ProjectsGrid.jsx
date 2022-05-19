@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { filterProjectByTag, PRJCTS } from "./prjcts";
 import { Link, useSearchParams } from "react-router-dom";
 import VisuallyHidden from "@reach/visually-hidden";
 import ProjectsTagLink from "./ProjectsTagLink";
+import LazyLoader from "../../components/LazyLoader";
 
-const ProjectsGrid = () => {
+const ProjectsGrid = ({ setPageLoading }) => {
     let [searchParams] = useSearchParams();
     let tags = searchParams.get("projects");
 
@@ -12,6 +13,12 @@ const ProjectsGrid = () => {
         if (!tags) return PRJCTS;
         return filterProjectByTag(tags);
     }, [tags]);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setPageLoading(false);
+        }, 500);
+    }, []);
 
     return (
         <div className="c-archives w-full h-screen overflow-auto flex justify-between bg-primary_dark">
@@ -30,10 +37,10 @@ const ProjectsGrid = () => {
                             <div className="c-card" key={project.id}>
                                 <Link to={`projects/${project.id}`}>
                                     <div className="c-card__image w-full h-auto max-h-68.5">
-                                        <img
+                                        <LazyLoader
                                             src={project.featuredImageUrl}
-                                            className="w-full h-full object-cover rounded-2.5"
                                             alt={project.name}
+                                            className="w-full h-full object-cover rounded-2.5 max-w-full object-center  object-scale-down "
                                         />
                                     </div>
 
@@ -50,14 +57,8 @@ const ProjectsGrid = () => {
                                     <ul className="flex">
                                         {project.tags.map((tag, index) => {
                                             return (
-                                                <li
-                                                    key={index}
-                                                    className="c-card__tag w-max flex items-center"
-                                                >
-                                                    <Link
-                                                        className="h5 u-light-gray-color"
-                                                        to={"/projects/?projects=" + tag}
-                                                    >
+                                                <li key={index} className="c-card__tag w-max flex items-center">
+                                                    <Link className="h5 u-light-gray-color" to={"/projects/?projects=" + tag}>
                                                         {" "}
                                                         {tag}
                                                     </Link>

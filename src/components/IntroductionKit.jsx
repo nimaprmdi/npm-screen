@@ -1,8 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Plyr from "plyr-react";
 import "plyr-react/dist/plyr.css";
 
-const IntroductionKit = () => {
+const IntroductionKit = ({ setPageLoading }) => {
+    useEffect(() => {
+        setTimeout(() => {
+            setPageLoading(false);
+        }, 500);
+    }, []);
+
     return (
         <div className="c-introduction w-full h-screen flex justify-end">
             <div className="w-3/6 h-auto flex content-center items-center">

@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-const Home = () => {
+const Home = ({ setPageLoading }) => {
+    useEffect(() => {
+        setTimeout(() => {
+            setPageLoading(false);
+        }, 500);
+    }, []);
+
     return (
         <div className="c-home u-container">
             <p className="c-home__title h1 u-white-color u-width-full">Welcome to</p>

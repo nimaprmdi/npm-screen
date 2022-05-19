@@ -1,11 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import BlogNotFound from "./BlogNotFound";
 import Flickity from "react-flickity-component";
 import { filterBlogById } from "./blgs";
 import { useParams } from "react-router-dom";
 import "flickity/css/flickity.css";
+import LazyLoader from "../../components/LazyLoader";
 
-const BlogView = () => {
+const BlogView = ({ setPageLoading }) => {
+    useEffect(() => {
+        setTimeout(() => {
+            setPageLoading(false);
+        }, 500);
+    }, []);
+
+    const [isImageLoaded, setImageIsLoaded] = useState(false);
+
     let { id } = useParams();
 
     if (!id) {
@@ -24,11 +33,12 @@ const BlogView = () => {
                 <Flickity className="w-full">
                     {blgs.galleryImagesUrl.map((image, index) => {
                         return (
-                            <div className="w-2/3 max-w-full h-190 max-h-screen py-4 mx-10">
-                                <img
-                                    key={index}
-                                    className="w-full h-full rounded-2.5 object-cover"
+                            <div key={index} className="w-2/3 max-w-full h-190 max-h-screen py-4 mx-10">
+                                <LazyLoader
+                                    setImageIsLoaded={setImageIsLoaded}
                                     src={image}
+                                    alt={`carousel-${index}`}
+                                    className={`w-full h-full rounded-2.5 ${isImageLoaded ? "object-cover" : "object-contain"}`}
                                 />
                             </div>
                         );

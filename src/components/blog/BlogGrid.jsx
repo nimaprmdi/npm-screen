@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { filterBlogByTag, BLGS } from "./blgs";
 import { Link, useSearchParams } from "react-router-dom";
 import VisuallyHidden from "@reach/visually-hidden";
 import BlogTagLink from "./BlogTagLink";
+import LazyLoader from "../../components/LazyLoader";
 
-const BlogGrid = () => {
+const BlogGrid = ({ setPageLoading }) => {
     let [searchParams] = useSearchParams();
     let tags = searchParams.get("category");
 
@@ -13,12 +14,18 @@ const BlogGrid = () => {
         return filterBlogByTag(tags);
     }, [tags]);
 
+    useEffect(() => {
+        setTimeout(() => {
+            setPageLoading(false);
+        }, 500);
+    }, []);
+
     return (
         <div className="c-archives w-full h-screen overflow-auto flex justify-between bg-primary_dark">
             <div className="c-archives__aside h-scree pt-16 pl-8">
                 <h2 className="u-white-color m-0">Blogs</h2>
                 <p className="h5 mt-6 u-light-gray-color">Categories</p>
-                {/* BlogTag link is here */}
+
                 <BlogTagLink />
             </div>
 
@@ -31,10 +38,10 @@ const BlogGrid = () => {
                             <div className="c-card" key={post.id}>
                                 <Link to={`post/${post.id}`}>
                                     <div className="c-card__image w-full h-auto max-h-68.5">
-                                        <img
+                                        <LazyLoader
                                             src={post.featuredImageUrl}
-                                            className="w-full h-full object-cover rounded-2.5"
                                             alt={post.name}
+                                            className="w-full h-full object-cover rounded-2.5 max-w-full object-center  object-scale-down "
                                         />
                                     </div>
 
@@ -51,14 +58,8 @@ const BlogGrid = () => {
                                     <ul className="flex">
                                         {post.tags.map((tag, index) => {
                                             return (
-                                                <li
-                                                    key={index}
-                                                    className="c-card__tag w-max flex items-center"
-                                                >
-                                                    <Link
-                                                        className="h5 u-light-gray-color"
-                                                        to={"/blog/?category=" + tag}
-                                                    >
+                                                <li key={index} className="c-card__tag w-max flex items-center">
+                                                    <Link className="h5 u-light-gray-color" to={"/blog/?category=" + tag}>
                                                         {tag}
                                                     </Link>
                                                 </li>

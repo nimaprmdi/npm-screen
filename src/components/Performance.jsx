@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Flickity from "react-flickity-component";
 import PerformanceItem from "./PerformanceItem";
 import { Icon } from "@iconify/react";
 
-const Performance = () => {
+const Performance = ({ setPageLoading }) => {
     const [performanceItems, setPerformanceItems] = useState([
         {
             icon: "akar-icons:html-fill",
@@ -74,6 +74,12 @@ const Performance = () => {
             ],
         },
     ]);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setPageLoading(false);
+        }, 500);
+    }, []);
 
     return (
         <div className="c-performance w-full h-max">
