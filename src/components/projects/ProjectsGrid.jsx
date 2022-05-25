@@ -40,7 +40,7 @@ const ProjectsGrid = ({ setPageLoading }) => {
                                         <LazyLoader
                                             src={project.featuredImageUrl}
                                             alt={project.name}
-                                            className="w-full h-full object-cover rounded-2.5 max-w-full object-center  object-scale-down "
+                                            className="w-full h-full object-cover rounded-2.5 max-w-full object-center hover:opacity-50 ease-linear	duration-100"
                                         />
                                     </div>
 
@@ -49,7 +49,7 @@ const ProjectsGrid = ({ setPageLoading }) => {
 
                                 <Link to={`projects/${project.id}`}>
                                     <div className="c-card__title mt-3.5">
-                                        <h4 className="w-max u-white-color">{project.name}</h4>
+                                        <h4 className="w-max u-white-color hover:text-primary_blue ease-linear duration-100">{project.name}</h4>
                                     </div>
                                 </Link>
 
@@ -58,8 +58,7 @@ const ProjectsGrid = ({ setPageLoading }) => {
                                         {project.tags.map((tag, index) => {
                                             return (
                                                 <li key={index} className="c-card__tag w-max flex items-center">
-                                                    <Link className="h5 u-light-gray-color" to={"/projects/?projects=" + tag}>
-                                                        {" "}
+                                                    <Link className="h5 u-light-gray-color hover:text-primary_white ease-linear duration-100" to={"/projects/?projects=" + tag}>
                                                         {tag}
                                                     </Link>
                                                 </li>

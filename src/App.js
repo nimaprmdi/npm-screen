@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./assets/sass/App.scss";
 import Home from "./components/Home";
 import IntroductionKit from "./components/IntroductionKit";
 import ProjectsGrid from "./components/projects/ProjectsGrid";
@@ -9,10 +8,34 @@ import BlogView from "./components/blog/BlogView";
 import Performance from "./components/Performance";
 import About from "./components/About";
 import Preloader from "./components/Preloader";
-import { HashRouter, Routes, Route } from "react-router-dom";
+import NotFound from "./components/NotFound";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
+import "./assets/sass/App.scss";
 
 function App() {
     const [pageLoading, setPageLoading] = useState(true);
+    const [jsonData, setJsonData] = useState();
+
+    // const getData = () => {
+    //     fetch("https://api.jsonbin.io/v3/b/628cf34105f31f68b3a53e80/latest", {
+    //         headers: {
+    //             "X-Master-Key": "$2b$10$bvY9QBKocZQZ7j.5X1n3ouJw8fqObdDTX9WQFWnXeKY/a7ykQzmwq",
+    //         },
+    //     })
+    //         .then(function (response) {
+    //             console.log(response);
+    //             return response.json();
+    //         })
+    //         .then(function (myJson) {
+    //             console.log(myJson.record);
+    //             setJsonData(myJson.record);
+    //         });
+    // };
+
+    // useEffect(() => {
+    //     console.log("app.js");
+    //     getData();
+    // }, []);
 
     return (
         <>
@@ -32,9 +55,12 @@ function App() {
                         </Route>
 
                         <Route path="projects">
-                            <Route index element={<ProjectsGrid setPageLoading={setPageLoading} />} />
+                            <Route index element={<ProjectsGrid jsonData={jsonData} setPageLoading={setPageLoading} />} />
                             <Route path="projects/:id" element={<ProjectsView setPageLoading={setPageLoading} />} />
                         </Route>
+
+                        <Route path="/404" element={<NotFound setPageLoading={setPageLoading} />} />
+                        <Route path="*" element={<Navigate replace to="/404" />} />
                     </Routes>
                 </div>
             </HashRouter>

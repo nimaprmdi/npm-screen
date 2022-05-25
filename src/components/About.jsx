@@ -4,6 +4,12 @@ import LazyLoader from "./LazyLoader";
 import nima from "../assets/images/nima-pour-mohamadi.jpg";
 
 const About = ({ setPageLoading }) => {
+    useEffect(() => {
+        setTimeout(() => {
+            setPageLoading(false);
+        }, 500);
+    }, []);
+
     const [context, setContext] = useState({
         title: "Hey there! I’m Nima.",
         description:
@@ -18,12 +24,6 @@ const About = ({ setPageLoading }) => {
             { name: "telegram", logo: "ant-design:skype-filled", url: "#" },
         ],
     });
-
-    useEffect(() => {
-        setTimeout(() => {
-            setPageLoading(false);
-        }, 500);
-    }, []);
 
     return (
         <div className="c-about w-full h-screen bg-gradient-to-b from-primary_heavy_dark to-primary_light flex">

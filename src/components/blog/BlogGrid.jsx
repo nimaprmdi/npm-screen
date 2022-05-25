@@ -41,7 +41,7 @@ const BlogGrid = ({ setPageLoading }) => {
                                         <LazyLoader
                                             src={post.featuredImageUrl}
                                             alt={post.name}
-                                            className="w-full h-full object-cover rounded-2.5 max-w-full object-center  object-scale-down "
+                                            className="w-full h-full object-cover rounded-2.5 max-w-full object-center  hover:opacity-50 ease-linear duration-100"
                                         />
                                     </div>
 
@@ -50,7 +50,7 @@ const BlogGrid = ({ setPageLoading }) => {
 
                                 <Link to={`post/${post.id}`}>
                                     <div className="c-card__title mt-3.5">
-                                        <h4 className="w-max u-white-color">{post.name}</h4>
+                                        <h4 className="w-max u-white-color hover:text-primary_blue ease-linear duration-100">{post.name}</h4>
                                     </div>
                                 </Link>
 
@@ -59,7 +59,7 @@ const BlogGrid = ({ setPageLoading }) => {
                                         {post.tags.map((tag, index) => {
                                             return (
                                                 <li key={index} className="c-card__tag w-max flex items-center">
-                                                    <Link className="h5 u-light-gray-color" to={"/blog/?category=" + tag}>
+                                                    <Link className="h5 u-light-gray-color hover:text-primary_white ease-linear duration-100" to={"/blog/?category=" + tag}>
                                                         {tag}
                                                     </Link>
                                                 </li>

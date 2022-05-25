@@ -10,6 +10,7 @@ module.exports = {
                 primary_dark: "#111419",
                 primary_light: "#292B2F",
                 primary_white: "#ffffff",
+                primary_blue: "#3A66FF",
             },
             spacing: {
                 25: "6.25rem", // 100px

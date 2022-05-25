@@ -2,14 +2,12 @@ let BLGS = [
     {
         id: "1",
         name: "How to implement shaders in webGL.",
+        description:
+            "In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. Wikipedia",
         tags: ["WebGl", "React", "Three.js"],
         featuredImageUrl: process.env.PUBLIC_URL + "/assets/images/projects/project-(1).jpg",
         projectUrl: "#",
-        galleryImagesUrl: [
-            process.env.PUBLIC_URL + "/assets/images/projects/cavatina/cavatina.jpg",
-            process.env.PUBLIC_URL + "/assets/images/projects/cavatina/cavatina-2.jpg",
-            process.env.PUBLIC_URL + "/assets/images/projects/cavatina/cavatina-3.jpg",
-        ],
+        galleryImagesUrl: [process.env.PUBLIC_URL + "/assets/images/projects/cavatina/cavatina.jpg"],
     },
     {
         id: "2",
