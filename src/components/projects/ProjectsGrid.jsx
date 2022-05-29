@@ -21,14 +21,14 @@ const ProjectsGrid = ({ setPageLoading }) => {
     }, []);
 
     return (
-        <div className="c-archives w-full h-screen overflow-auto flex justify-between bg-primary_dark">
-            <div className="c-archives__aside h-scree pt-16 pl-8">
+        <div className="c-archives w-full flex justify-between bg-primary_dark">
+            <div className="c-archives__aside h-screen pt-16 pl-8">
                 <h2 className="u-white-color m-0">Projects</h2>
                 <p className="h5 mt-6 u-light-gray-color">Categories</p>
                 <ProjectsTagLink />
             </div>
 
-            <div className="c-archives-cards h-screen overflow-auto pt-16 pr-16 ">
+            <div className="c-archives-cards py-16 pr-16 ">
                 <div className="c-cards flex justify-between flex-wrap w-full gap-y-16">
                     {projects.map((project) => {
                         let name = `${project.name}`;
@@ -36,7 +36,7 @@ const ProjectsGrid = ({ setPageLoading }) => {
                         return (
                             <div className="c-card" key={project.id}>
                                 <Link to={`projects/${project.id}`}>
-                                    <div className="c-card__image w-full h-auto max-h-68.5">
+                                    <div className="c-card__image w-full h-auto max-h-96">
                                         <LazyLoader
                                             src={project.featuredImageUrl}
                                             alt={project.name}

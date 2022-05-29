@@ -16,27 +16,6 @@ function App() {
     const [pageLoading, setPageLoading] = useState(true);
     const [jsonData, setJsonData] = useState();
 
-    // const getData = () => {
-    //     fetch("https://api.jsonbin.io/v3/b/628cf34105f31f68b3a53e80/latest", {
-    //         headers: {
-    //             "X-Master-Key": "$2b$10$bvY9QBKocZQZ7j.5X1n3ouJw8fqObdDTX9WQFWnXeKY/a7ykQzmwq",
-    //         },
-    //     })
-    //         .then(function (response) {
-    //             console.log(response);
-    //             return response.json();
-    //         })
-    //         .then(function (myJson) {
-    //             console.log(myJson.record);
-    //             setJsonData(myJson.record);
-    //         });
-    // };
-
-    // useEffect(() => {
-    //     console.log("app.js");
-    //     getData();
-    // }, []);
-
     return (
         <>
             <Preloader pageLoading={pageLoading} />

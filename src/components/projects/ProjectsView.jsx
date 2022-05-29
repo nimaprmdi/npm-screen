@@ -64,7 +64,7 @@ const ProjectsView = ({ setPageLoading }) => {
                     <p className="u-white-color h3 mt-8 max-w-230">{prjct.description}</p>
 
                     <div className="mt-10">
-                        <a href={prjct.projectUrl} className="o-btn mt-10">
+                        <a target="_blank" href={prjct.projectUrl} className="o-btn mt-10">
                             Visit Demo
                         </a>
                     </div>
