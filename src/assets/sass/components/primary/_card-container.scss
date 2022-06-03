@@ -22,3 +22,7 @@
         max-height: inherit;
     }
 }
+
+.c-card__img.loading {
+    object-fit: contain;
+}

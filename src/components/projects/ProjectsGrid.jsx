@@ -40,7 +40,7 @@ const ProjectsGrid = ({ setPageLoading }) => {
                                         <LazyLoader
                                             src={project.featuredImageUrl}
                                             alt={project.name}
-                                            className="w-full h-full object-cover rounded-2.5 max-w-full object-center hover:opacity-50 ease-linear	duration-100"
+                                            className="c-card__img w-full h-full object-cover rounded-2.5 max-w-full object-center hover:opacity-50 ease-linear	duration-100"
                                         />
                                     </div>
 

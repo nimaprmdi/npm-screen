@@ -14,8 +14,6 @@ const ProjectsView = ({ setPageLoading }) => {
         }, 500);
     }, []);
 
-    const [isImageLoaded, setImageIsLoaded] = useState(false);
-
     let { id } = useParams();
 
     if (!id) {
@@ -44,13 +42,8 @@ const ProjectsView = ({ setPageLoading }) => {
                 <Flickity options={options} className="w-full">
                     {prjct.galleryImagesUrl.map((image, index) => {
                         return (
-                            <div key={index} className="w-2/3 max-w-full h-190 max-h-screen py-4 mx-10">
-                                <LazyLoader
-                                    setImageIsLoaded={setImageIsLoaded}
-                                    src={image}
-                                    alt={`carousel-${index}`}
-                                    className={`w-full h-full max-h-full rounded-2.5 ${isImageLoaded ? "object-cover" : "object-contain"}`}
-                                />
+                            <div key={index} className="w-2/3 max-w-full h-190 max-h-screen py-4 mx-10 flex items-center">
+                                <LazyLoader src={image} alt={`carousel-${index}`} className={`c-projects__carousel__image w-full h-auto max-h-full rounded-2.5`} />
                             </div>
                         );
                     })}

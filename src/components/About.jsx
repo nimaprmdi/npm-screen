@@ -13,7 +13,7 @@ const About = ({ setPageLoading }) => {
     const [context, setContext] = useState({
         title: "Hey there! I’m Nima.",
         description:
-            "I’m Nima Pour Mohamadi and I’m a Front-End & WebGL developer. Educated in Information Technology (IT). Passionate to create create crative web based products in well favored styles.",
+            "I’m Nima Pour Mohamadi and I’m a Front-End developer. Educated in Information Technology (IT). Passionate to create crative web based products in well-favored styles.",
         socialTexts: "Let’s be social",
 
         socialsItems: [
