@@ -17,11 +17,11 @@ const About = ({ setPageLoading }) => {
         socialTexts: "Let’s be social",
 
         socialsItems: [
-            { name: "telegram", logo: "bxl:telegram", url: "#" },
-            { name: "telegram", logo: "carbon:phone", url: "#" },
-            { name: "telegram", logo: "bxl:codepen", url: "#" },
-            { name: "telegram", logo: "ant-design:mail-outlined", url: "#" },
-            { name: "telegram", logo: "ant-design:skype-filled", url: "#" },
+            { name: "telegram", logo: "bxl:telegram", url: "https://t.me/nimaprmi" },
+            { name: "phone", logo: "carbon:phone", url: "tel:+989391391979" },
+            { name: "codepen", logo: "bxl:codepen", url: "https://codepen.io/nimaprmi" },
+            { name: "email", logo: "ant-design:mail-outlined", url: "mailto:nimaprmdi@gmail.com" },
+            { name: "skype", logo: "ant-design:skype-filled", url: "https://join.skype.com/invite/pWiMdLPglokt" },
         ],
     });
 
@@ -39,7 +39,7 @@ const About = ({ setPageLoading }) => {
                     <div className="c-about__socials flex justify-start mt-6">
                         {context.socialsItems.map((social, index) => {
                             return (
-                                <a key={index} href={social.url}>
+                                <a key={index} href={social.url} target="_blank">
                                     <div className="c-about__social-item w-25 h-25 bg-primary mr-8 flex items-center justify-center rounded-2.5">
                                         <Icon className="w-14 h-14 u-white-color" icon={social.logo} />
                                     </div>
