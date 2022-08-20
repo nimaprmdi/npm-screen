@@ -49,7 +49,9 @@ const ProjectsGrid = ({ setPageLoading }) => {
 
                                 <Link to={`projects/${project.id}`}>
                                     <div className="c-card__title mt-3.5">
-                                        <h4 className="w-max u-white-color hover:text-primary_blue ease-linear duration-100">{project.name}</h4>
+                                        <h4 className="w-max u-white-color hover:text-primary_blue ease-linear duration-100">
+                                            {project.name}
+                                        </h4>
                                     </div>
                                 </Link>
 
@@ -58,7 +60,10 @@ const ProjectsGrid = ({ setPageLoading }) => {
                                         {project.tags.map((tag, index) => {
                                             return (
                                                 <li key={index} className="c-card__tag w-max flex items-center">
-                                                    <Link className="h5 u-light-gray-color hover:text-primary_white ease-linear duration-100" to={"/projects/?projects=" + tag}>
+                                                    <Link
+                                                        className="h5 u-light-gray-color hover:text-primary_white ease-linear duration-100"
+                                                        to={"/projects/?projects=" + tag}
+                                                    >
                                                         {tag}
                                                     </Link>
                                                 </li>
